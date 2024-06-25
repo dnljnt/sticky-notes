@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+  border: 3px solid black;
+  height: 100dvh;
+}
+
+.create{
+  border: 3px solid pink;
+  height: 100%;
+  /* margin-left: 5%; */
+}
+
+.create button{
+  outline: none;
+  border: none;
+  padding: .75rem;
+  border-radius: .5rem;
+  background-color: antiquewhite;
+  color: black;
+  cursor: pointer;
+}
+
+form{
+  display: none;
+  border: 3px solid blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  /* padding: 12px; */
+}
+
+form textarea{
+  width: 275px;
+  height: 275px;
+  outline: none;
+  border: 1px solid red;
+  padding: 40px 25px 25px 25px;
+  resize: none;
+  position: relative;
+}
+
+.icon{
+  border: 3px solid green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.notes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.notes-style{
+  width: 250px;
+  height: 250px;
+  padding: 25px;
+  margin-top: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.scale-on{
+  transform: scale(1.1);
+  transition: transform .3s linear;
+}
+
+.scale-on:hover{
+  transform: scale(1);
+}
+
+.scale-off{
+  transform: scale(1);
+  transition: transform .3s linear;
+}
+
+.scale-off:hover{
+  transform: scale(1.1);
+}

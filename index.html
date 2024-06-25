@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Notes</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="create">
+        <button type="button" onclick="typeNote()">Buat Notes</button>
+        <form id="form">
+          <textarea
+            name="Notes"
+            id="note"
+            maxlength="90"
+            placeholder="Create note"
+          ></textarea>
+          <div class="icon">
+            <i class="ri-check-fill ri-xl" id="submit"></i>
+            <i class="ri-close-fill ri-xl" id="close"></i>
+          </div>
+        </form>
+        <div class="notes"></div>
+      </div>
+    </div>
+    <script src="src/main.js"></script>
+  </body>
+</html>
