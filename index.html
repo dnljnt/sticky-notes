@@ -9,17 +9,27 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Architects+Daughter:regular"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
+      <div class="title">
+        <h1>Papan Kegiatan</h1>
+      </div>
       <div class="create">
-        <button type="button" onclick="typeNote()">Buat Notes</button>
+        <button type="button" onclick="typeNote()">
+          Buat Notes <span><i class="ri-ball-pen-line"></i></span>
+        </button>
         <form id="form">
           <textarea
             name="Notes"
             id="note"
             maxlength="90"
             placeholder="Create note"
+            autofocus
           ></textarea>
           <div class="icon">
             <i class="ri-check-fill ri-xl" id="submit"></i>

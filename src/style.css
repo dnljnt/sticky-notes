@@ -8,7 +8,14 @@
   max-width: 1120px;
   margin: 0 auto;
   border: 3px solid black;
-  height: 100dvh;
+  transition: all .3s linear;
+}
+
+.title{
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "Architects Daughter", cursive;
 }
 
 .create{
@@ -25,6 +32,7 @@
   background-color: antiquewhite;
   color: black;
   cursor: pointer;
+  font-weight: 600;
 }
 
 form{
@@ -46,6 +54,8 @@ form textarea{
   padding: 40px 25px 25px 25px;
   resize: none;
   position: relative;
+  font-size: 18px;
+  font-family: "Architects Daughter", cursive;;
 }
 
 .icon{
@@ -61,6 +71,7 @@ form textarea{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .notes-style{
@@ -72,6 +83,7 @@ form textarea{
   cursor: pointer;
   word-wrap: break-word;
   white-space: pre-wrap;
+  font-family: "Architects Daughter", cursive;
 }
 
 .scale-on{

@@ -2,6 +2,7 @@ const notes = document.getElementsByClassName("notes")[0];
 const form = document.getElementById("form");
 const checkIcon = document.getElementById("submit");
 const closeIcon = document.getElementById("close");
+const noteTextarea = document.getElementById("note");
 let i = 0;
 
 closeIcon.addEventListener("click", () => {
@@ -15,6 +16,7 @@ checkIcon.addEventListener("click", () => {
 function typeNote() {
   if (form.style.display == "none") {
     form.style.display = "block";
+    noteTextarea.focus();
   } else {
     form.style.display = "none";
   }
