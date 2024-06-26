@@ -13,6 +13,13 @@ checkIcon.addEventListener("click", () => {
   creteNote();
 });
 
+document.addEventListener("keydown", (e) => {
+  if(e.ctrlKey && e.key === "Enter"){
+    e.preventDefault();
+    creteNote();
+  }
+})
+
 function typeNote() {
   if (form.style.display == "none") {
     form.style.display = "block";
@@ -44,6 +51,9 @@ function creteNote() {
   div.addEventListener("dblclick", ()=> {
     div.remove()
   })
+  div.addEventListener("click", () => {
+    h1.setAttribute("contenteditable", "true")
+  })
   document.getElementById("note").value = ''
 }
 
@@ -74,6 +84,12 @@ function colors() {
     "#04ee22",
     "#bc83e6",
     "#ebb328",
+    "#A2A3EA",
+    "#EFA0A0",
+    "#A5CCF8",
+    "#FEF9C3",
+    "#FBCFE8",
+    "#D1FAE5"
   ];
   if (i > randColor.length - 1) {
     i = 0;
