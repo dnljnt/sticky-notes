@@ -6,7 +6,7 @@ const noteTextarea = document.getElementById("note");
 let i = 0;
 
 closeIcon.addEventListener("click", () => {
-  typeNote();
+  toggleForm(false);
 });
 
 checkIcon.addEventListener("click", () => {
@@ -14,25 +14,25 @@ checkIcon.addEventListener("click", () => {
 });
 
 document.addEventListener("keydown", (e) => {
-  if(e.ctrlKey && e.key === "Enter"){
+  if (e.shiftKey && e.code === "KeyN") {
+    e.preventDefault();
+    toggleForm(true);
+  } else if (e.code === "Escape") {
+    toggleForm(false);
+  } else if (e.ctrlKey && e.key === "Enter") {
     e.preventDefault();
     creteNote();
   }
-})
-
-document.addEventListener("keydown", (e) => {
-  if(e.key === "Escape"){
-    e.preventDefault();
-    typeNote();
-  }
-})
-
-document.addEventListener("keydown", (e) => {
-  if (e.shiftKey && e.code === 'KeyN') {
-    e.preventDefault();
-    typeNote();
-  }
 });
+
+function toggleForm(forceOpen) {
+  if (forceOpen) {
+    form.style.display = "block";
+    noteTextarea.focus();
+  } else {
+    form.style.display = "none";
+  }
+}
 
 function typeNote() {
   if (form.style.display == "none") {
@@ -44,31 +44,31 @@ function typeNote() {
 }
 
 function creteNote() {
-  const noteText = document.getElementById("note").value
+  const noteText = document.getElementById("note").value;
   const div = document.createElement("div");
   const h1 = document.createElement("h1");
 
   h1.innerHTML = noteText;
   h1.classList.add("notes-style");
-  h1.style.margin = margin()
-  h1.style.transform = rotates()
-  h1.style.background = colors()
+  h1.style.margin = margin();
+  h1.style.transform = rotates();
+  h1.style.background = colors();
   div.appendChild(h1);
 
-  notes.insertAdjacentElement("beforeend", div)
-  div.addEventListener("mouseenter", ()=> {
-    div.classList.add("scale-on")
-  })
-  div.addEventListener("mouseleave", ()=> {
-    div.classList.add("scale-off")
-  })
-  div.addEventListener("dblclick", ()=> {
-    div.remove()
-  })
+  notes.insertAdjacentElement("beforeend", div);
+  div.addEventListener("mouseenter", () => {
+    div.classList.add("scale-on");
+  });
+  div.addEventListener("mouseleave", () => {
+    div.classList.add("scale-off");
+  });
+  div.addEventListener("dblclick", () => {
+    div.remove();
+  });
   div.addEventListener("click", () => {
-    h1.setAttribute("contenteditable", "true")
-  })
-  document.getElementById("note").value = ''
+    h1.setAttribute("contenteditable", "true");
+  });
+  document.getElementById("note").value = "";
 }
 
 function margin() {
@@ -103,7 +103,7 @@ function colors() {
     "#A5CCF8",
     "#FEF9C3",
     "#FBCFE8",
-    "#D1FAE5"
+    "#D1FAE5",
   ];
   if (i > randColor.length - 1) {
     i = 0;

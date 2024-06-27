@@ -1,65 +1,74 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container{
-  max-width: 1120px;
-  margin: 0 auto;
-  border: 3px solid black;
-  transition: all .3s linear;
+body {
+  background-color: #faeee7;
 }
 
-.title{
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  transition: all 0.3s linear;
+}
+
+.title {
   text-align: center;
   padding: 1rem;
   font-size: 2rem;
   font-family: "Architects Daughter", cursive;
+  color: #33272a;
+  border-bottom: 3px solid #ff8ba7;
 }
 
-.create{
-  border: 3px solid pink;
+.create {
   height: 100%;
   /* margin-left: 5%; */
 }
 
-.create button{
+.create button {
   outline: none;
   border: none;
-  padding: .75rem;
-  border-radius: .5rem;
-  background-color: antiquewhite;
-  color: black;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #ff8ba7;
+  color: #33272a;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 0;
 }
 
-form{
+form {
   display: none;
-  border: 3px solid blue;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
-  /* padding: 12px; */
+  background-color: #fffffe;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-form textarea{
+form textarea {
   width: 275px;
   height: 275px;
   outline: none;
-  border: 1px solid red;
+  border: none;
   padding: 40px 25px 25px 25px;
   resize: none;
   position: relative;
   font-size: 18px;
-  font-family: "Architects Daughter", cursive;;
+  font-family: "Architects Daughter", cursive;
+  background-color: #fffffe;
+  color: #33272a;
+  font-weight: 500;
 }
 
-.icon{
-  border: 3px solid green;
+.icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -67,14 +76,14 @@ form textarea{
   padding: 8px;
 }
 
-.notes{
+.notes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 1.5rem;
 }
 
-.notes-style{
+.notes-style {
   width: 250px;
   height: 250px;
   padding: 25px;
@@ -84,22 +93,23 @@ form textarea{
   word-wrap: break-word;
   white-space: pre-wrap;
   font-family: "Architects Daughter", cursive;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-.scale-on{
+.scale-on {
   transform: scale(1.1);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 }
 
-.scale-on:hover{
+.scale-on:hover {
   transform: scale(1);
 }
 
-.scale-off{
+.scale-off {
   transform: scale(1);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 }
 
-.scale-off:hover{
+.scale-off:hover {
   transform: scale(1.1);
 }

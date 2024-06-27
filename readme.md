@@ -10,7 +10,15 @@ Project ini adalah Aplikasi Catatan sederhana yang dibuat dengan HTML, CSS, dan 
 
 - Hapus catatan dengan mengklik dua kali pada catatan tersebut
 
-- Catatan memiliki gaya dinamis, termasuk margin acak, rotasi, dan warna - latar belakang
+- Catatan memiliki gaya dinamis, termasuk margin acak, rotasi, dan warna latar belakang
+
+- [UPDATE] Menambah, membuka dan menutup menggunakan short cut
+
+| Short cut | Description                |
+| :-------- | :------------------------- |
+| `ctrl + enter` | create notes |
+| `shift + n` | open modal note |
+| `esc` | close the modal |
 
 ## Contributing
 
