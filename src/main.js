@@ -20,6 +20,20 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape"){
+    e.preventDefault();
+    typeNote();
+  }
+})
+
+document.addEventListener("keydown", (e) => {
+  if (e.shiftKey && e.code === 'KeyN') {
+    e.preventDefault();
+    typeNote();
+  }
+});
+
 function typeNote() {
   if (form.style.display == "none") {
     form.style.display = "block";
